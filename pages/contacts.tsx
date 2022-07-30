@@ -1,12 +1,12 @@
 import React from 'react'
 import PageContainer from '../layouts/PageContainer'
 
-function home() {
+function contact() {
   return (
     <PageContainer>
-      <p>home</p>
+      <p>contacts</p>
     </PageContainer>
   )
 }
 
-export default home
+export default contact
