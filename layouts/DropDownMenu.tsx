@@ -1,24 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
 interface Props {
     //boolean to always open ddm (for presentation)
-    forceOpen?: boolean;
-    label?: string;
-    withDivider?: boolean;
-    icon?: JSX.Element;
-    items: DDMItem[];
-    withBackground?: boolean;
+    forceOpen?: boolean
+    label?: string
+    withDivider?: boolean
+    icon?: JSX.Element
+    items: DDMItem[]
+    withBackground?: boolean
 }
 
 export interface DDMItem {
-    icon?: JSX.Element;
-    label: string;
-    desc?: string;
-    link?: string;
+    icon?: JSX.Element
+    label: string
+    desc?: string
+    link?: string
 }
 
 const DropDownMenu = (props: Props) => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false)
     return (
         <div className="relative inline-block text-left">
             <div>
@@ -66,12 +66,12 @@ const DropDownMenu = (props: Props) => {
                                         {item.desc && <span className="text-gray-400 text-xs">{item.desc}</span>}
                                     </span>
                                 </a>
-                            );
+                            )
                         })}
                     </div>
                 </div>
             )}
         </div>
-    );
-};
-export default DropDownMenu;
+    )
+}
+export default DropDownMenu

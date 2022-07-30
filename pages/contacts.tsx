@@ -1,11 +1,11 @@
 import React from 'react'
-import PageContainer from '../layouts/PageContainer'
+import Layout from '../layouts/Layout'
 
 function contact() {
   return (
-    <PageContainer>
+    <Layout>
       <p>contacts</p>
-    </PageContainer>
+    </Layout>
   )
 }
 

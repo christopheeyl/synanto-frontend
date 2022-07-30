@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import DropDownMenu from './DropDownMenu';
+import Link from 'next/link'
+import DropDownMenu from './DropDownMenu'
 
 function Navbar() {
     return (
@@ -56,4 +56,4 @@ function Navbar() {
     )
 }
 
-export default Navbar;
+export default Navbar
