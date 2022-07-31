@@ -1,5 +1,5 @@
-import React from 'react'
-import Layout from '../layouts/Layout'
+import React from "react";
+import Layout from "../layouts/Layout";
 
 function event() {
   return (
@@ -7,6 +7,6 @@ function event() {
       <p>event</p>
     </Layout>
   )
-}
+};
 
-export default event
+export default event;

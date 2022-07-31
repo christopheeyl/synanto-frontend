@@ -1,15 +1,39 @@
-import { NextPage } from 'next';
 import { signIn } from 'next-auth/react';
-import React, { FormEventHandler, useState } from 'react';
+import React from 'react';
+import {  useForm } from 'react-hook-form';
 
-const SignIn: NextPage = (): JSX.Element => {
-    const [userInfo, setUserInfo] = useState({ email: "", password: ""});
-    const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
-        e.preventDefault();
+interface ISignInForm {
+    email: string;
+    password: string;
+}
 
+enum ISignInFormKeys {
+	Email = 'email',
+	Password = 'password',
+}
+
+/* const resolver: Resolver<ISignInForm> = async (values) => {
+    return {
+        values: values.password ? values : {},
+        errors: !values.password
+        ? {
+            password: {
+                type: 'required',
+                message: 'This is required.',
+            },
+        }
+        : {},
+    };
+}; */
+
+
+const SignIn = () : JSX.Element=> {
+    const { register, handleSubmit, formState: { errors } } = useForm<ISignInForm>(/* { resolver } */);
+
+    const onSubmit = async (data: ISignInForm) => {
         const res = await signIn('credentials', {
-            email: userInfo.email,
-            password: userInfo.password,
+            email: data.email,
+            password: data.password,
             redirect: false,
         });
     };
@@ -22,7 +46,7 @@ const SignIn: NextPage = (): JSX.Element => {
                         Login To Your Account
                     </div>
                     <div className="mt-8">
-                        <form action="#" autoComplete="off" onSubmit={handleSubmit}>
+                        <form action="#" autoComplete="off" onSubmit={handleSubmit(onSubmit)}>
                             <div className="flex flex-col mb-2">
                                 <div className="flex relative ">
                                     <span className="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
@@ -31,8 +55,19 @@ const SignIn: NextPage = (): JSX.Element => {
                                             </path>
                                         </svg>
                                     </span>
-                                    <input type="text" id="sign-in-email" onChange={({ target }) => setUserInfo({ ...userInfo, email: target.value })} className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Your email"/>
+                                    <input 
+                                        type="text"
+                                        id="sign-in-email"
+                                        className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" 
+                                        placeholder="Your email"
+                                        {...register(ISignInFormKeys.Email, {required: true, pattern: /^\S+@\S+$/i})}
+                                    />
                                 </div>
+                                {errors.email && (
+                                    <div className="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">
+                                        {errors.email.message}
+                                    </div>
+                                )}
                             </div>
                             <div className="flex flex-col mb-6">
                                 <div className="flex relative ">
@@ -42,8 +77,20 @@ const SignIn: NextPage = (): JSX.Element => {
                                             </path>
                                         </svg>
                                     </span>
-                                    <input type="password" id="sign-in-password" autoComplete='off' onChange={({ target }) => setUserInfo({ ...userInfo, password: target.value })} className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Your password"/>
+                                    <input 
+                                        type="password"
+                                        id="sign-in-password" 
+                                        autoComplete='off'
+                                        className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" 
+                                        placeholder="Your password"
+                                        {...register(ISignInFormKeys.Password, {required: true})}
+                                    />
                                 </div>
+                                {errors.password && (
+                                    <div className="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">
+                                        {errors.password.message}
+                                    </div>
+                                )}
                             </div>
                             <div className="flex items-center mb-6 -mt-4">
                                 <div className="flex ml-auto">
@@ -70,6 +117,5 @@ const SignIn: NextPage = (): JSX.Element => {
             </div>
         </div>
     )
-};
-
+}
 export default SignIn;

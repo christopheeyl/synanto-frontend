@@ -1,6 +1,5 @@
-import NextAuth, { NextAuthOptions } from 'next-auth'
-import CredentialsProvider from 'next-auth/providers/credentials'
-import Router from 'next/router';
+import NextAuth, { NextAuthOptions } from "next-auth";
+import CredentialsProvider from "next-auth/providers/credentials";
 
 const authOptions: NextAuthOptions = {
     session: {
@@ -29,7 +28,7 @@ const authOptions: NextAuthOptions = {
     ],
     pages: {
         signIn: "/auth/signin",
-    }
+    },
 }
 
 export default NextAuth(authOptions);

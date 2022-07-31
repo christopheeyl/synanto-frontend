@@ -1,5 +1,5 @@
-import React from 'react'
-import Layout from '../layouts/Layout'
+import React from "react";
+import Layout from "../layouts/Layout";
 
 function contact() {
   return (
@@ -7,6 +7,6 @@ function contact() {
       <p>contacts</p>
     </Layout>
   )
-}
+};
 
-export default contact
+export default contact;

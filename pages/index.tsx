@@ -1,18 +1,8 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Layout from '../layouts/Layout';
-import { useSession } from 'next-auth/react';
-import { useEffect } from 'react';
-import Router from 'next/router';
+import type { NextPage } from "next";
+import Head from "next/head";
+import Layout from "../layouts/Layout";
 
 const Home: NextPage = () => {
-  const { data: session, status } = useSession();
-
-  useEffect(() => {
-    if (status === 'unauthenticated') Router.replace("/auth/signin");
-  });
-
-  if (status === 'authenticated') 
     return (
       <div>
         <Head>
@@ -25,8 +15,6 @@ const Home: NextPage = () => {
         </Layout>
       </div>
     )
-
-  return <div>Loading...</div>;
 };
 
 export default Home;

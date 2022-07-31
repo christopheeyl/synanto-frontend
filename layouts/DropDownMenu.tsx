@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 interface Props {
     //boolean to always open ddm (for presentation)
@@ -18,7 +18,8 @@ export interface DDMItem {
 };
 
 const DropDownMenu = (props: Props) => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <div className="relative inline-block text-left">
             <div>
@@ -73,5 +74,6 @@ const DropDownMenu = (props: Props) => {
             )}
         </div>
     )
-}
-export default DropDownMenu
+};
+
+export default DropDownMenu;
