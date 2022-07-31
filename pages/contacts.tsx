@@ -1,12 +1,13 @@
-import React from "react";
-import Layout from "../layouts/Layout";
+import { withPageAuthRequired } from '@auth0/nextjs-auth0';
+import React from 'react';
+import Layout from '../layouts/Layout';
 
-function contact() {
+function Contacts() {
   return (
     <Layout>
-      <p>contacts</p>
+      <p>Contacts</p>
     </Layout>
-  )
-};
+  );
+}
 
-export default contact;
+export default withPageAuthRequired(Contacts);

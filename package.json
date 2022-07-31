@@ -5,9 +5,13 @@
     "build": "next build",
     "start": "next start",
     "test": "start-server-and-test dev 3000 cypress:open",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "type-check": "tsc --pretty --noEmit",
+    "format": "prettier --write ."
   },
   "dependencies": {
+    "@auth0/auth0-react": "^1.10.2",
+    "@auth0/nextjs-auth0": "^1.9.1",
     "next": "latest",
     "next-auth": "^4.10.2",
     "react": "18.1.0",
@@ -16,12 +20,20 @@
     "start-server-and-test": "^1.14.0"
   },
   "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.0",
+    "@tailwindcss/jit": "^0.1.4",
     "@types/node": "17.0.35",
     "@types/react": "18.0.9",
     "@types/react-dom": "18.0.5",
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.14",
+    "prettier": "2.7.1",
     "tailwindcss": "^3.1.2",
     "typescript": "4.7.2"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleQuote": true
   }
 }

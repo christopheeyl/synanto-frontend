@@ -1,51 +1,50 @@
 [
-    {
-        "id": 1,
-        "first_name": "Christophe",
-        "last_name": "Eyl",
-        "email": "christophe.eyl@gmail.com",
-        "phone": "0617189540",
-        "password": "ABC123*!",
-        "last_login": "2022-01-01T00:00:00",
-        "last_activity": "2022-01-01T00:00:00",
-        "created_at": "2022-01-01T00:00:00",
-        "updated_at": "2022-01-01T00:00:00"
-
-    },
-    {
-        "id": 2,
-        "first_name": "Célia",
-        "last_name": "Eyl",
-        "email": "celia.eyl@gmail.com",
-        "phone": "0617189540",
-        "password": "ABC123*!",
-        "last_login": "2022-01-01T00:00:00",
-        "last_activity": "2022-01-01T00:00:00",
-        "created_at": "2022-01-01T00:00:00",
-        "updated_at": "2022-01-01T00:00:00"
-    },
-    {
-        "id": 3,
-        "first_name": "Yannick",
-        "last_name": "Eyl",
-        "email": "yannick.eyl@gmail.com",
-        "phone": "0617189540",
-        "password": "ABC123*!",
-        "last_login": "2022-01-01T00:00:00",
-        "last_activity": "2022-01-01T00:00:00",
-        "created_at": "2022-01-01T00:00:00",
-        "updated_at": "2022-01-01T00:00:00"
-    },
-    {
-        "id": 4,
-        "first_name": "Xavier",
-        "last_name": "Eyl",
-        "email": "xavier.eyl@gmail.com",
-        "phone": "0617189540",
-        "password": "ABC123*!",
-        "last_login": "2022-01-01T00:00:00",
-        "last_activity": "2022-01-01T00:00:00",
-        "created_at": "2022-01-01T00:00:00",
-        "updated_at": "2022-01-01T00:00:00"
-    }
+  {
+    "id": 1,
+    "first_name": "Christophe",
+    "last_name": "Eyl",
+    "email": "christophe.eyl@gmail.com",
+    "phone": "0617189540",
+    "password": "ABC123*!",
+    "last_login": "2022-01-01T00:00:00",
+    "last_activity": "2022-01-01T00:00:00",
+    "created_at": "2022-01-01T00:00:00",
+    "updated_at": "2022-01-01T00:00:00"
+  },
+  {
+    "id": 2,
+    "first_name": "Célia",
+    "last_name": "Eyl",
+    "email": "celia.eyl@gmail.com",
+    "phone": "0617189540",
+    "password": "ABC123*!",
+    "last_login": "2022-01-01T00:00:00",
+    "last_activity": "2022-01-01T00:00:00",
+    "created_at": "2022-01-01T00:00:00",
+    "updated_at": "2022-01-01T00:00:00"
+  },
+  {
+    "id": 3,
+    "first_name": "Yannick",
+    "last_name": "Eyl",
+    "email": "yannick.eyl@gmail.com",
+    "phone": "0617189540",
+    "password": "ABC123*!",
+    "last_login": "2022-01-01T00:00:00",
+    "last_activity": "2022-01-01T00:00:00",
+    "created_at": "2022-01-01T00:00:00",
+    "updated_at": "2022-01-01T00:00:00"
+  },
+  {
+    "id": 4,
+    "first_name": "Xavier",
+    "last_name": "Eyl",
+    "email": "xavier.eyl@gmail.com",
+    "phone": "0617189540",
+    "password": "ABC123*!",
+    "last_login": "2022-01-01T00:00:00",
+    "last_activity": "2022-01-01T00:00:00",
+    "created_at": "2022-01-01T00:00:00",
+    "updated_at": "2022-01-01T00:00:00"
+  }
 ]

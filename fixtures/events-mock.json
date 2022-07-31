@@ -1,32 +1,32 @@
 [
-    {
-        "id": 1,
-        "name": "Anniversaire de Célia",
-        "start_time": "2022-01-01T00:00:00",
-        "end_time": "2022-01-02T00:00:00"
-    },
-    {
-        "id": 2,
-        "name": "Voyage Brésil",
-        "start_time": null,
-        "end_time": null
-    },
-    {
-        "id": 3,
-        "name": "Soirée jeux de société",
-        "start_time": null,
-        "end_time": null
-    },
-    {
-        "id": 4,
-        "name": "Soirée jeux de société",
-        "start_time": null,
-        "end_time": null
-    },
-    {
-        "id": 5,
-        "name": "Sortie restaurant",
-        "start_time": null,
-        "end_time": null
-    }
+  {
+    "id": 1,
+    "name": "Anniversaire de Célia",
+    "start_time": "2022-01-01T00:00:00",
+    "end_time": "2022-01-02T00:00:00"
+  },
+  {
+    "id": 2,
+    "name": "Voyage Brésil",
+    "start_time": null,
+    "end_time": null
+  },
+  {
+    "id": 3,
+    "name": "Soirée jeux de société",
+    "start_time": null,
+    "end_time": null
+  },
+  {
+    "id": 4,
+    "name": "Soirée jeux de société",
+    "start_time": null,
+    "end_time": null
+  },
+  {
+    "id": 5,
+    "name": "Sortie restaurant",
+    "start_time": null,
+    "end_time": null
+  }
 ]

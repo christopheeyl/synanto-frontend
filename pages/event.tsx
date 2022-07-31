@@ -1,12 +1,13 @@
-import React from "react";
-import Layout from "../layouts/Layout";
+import { withPageAuthRequired } from '@auth0/nextjs-auth0';
+import React from 'react';
+import Layout from '../layouts/Layout';
 
-function event() {
+function Event() {
   return (
     <Layout>
-      <p>event</p>
+      <p>Event</p>
     </Layout>
-  )
-};
+  );
+}
 
-export default event;
+export default withPageAuthRequired(Event);

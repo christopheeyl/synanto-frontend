@@ -1,29 +1,17 @@
-import { useSession } from "next-auth/react";
-import Router from "next/router";
-import { Fragment } from "react";
-import Navbar from "./Navbar";
+import { Fragment } from 'react';
+import Header from './Header';
 
 interface LayoutProps {
-    children: JSX.Element;
+  children: JSX.Element;
 }
 
 function Layout({ children }: LayoutProps) {
-    const { status } = useSession();
-
-    if (status === 'authenticated') {
-        Router.replace("/");
-    }
-
-    if (status === 'unauthenticated') {
-        Router.replace("/auth/signin");
-    }
-
-    return (
-        <Fragment>
-            <Navbar />
-            <main>{children}</main>
-        </Fragment>
-    )
-};
+  return (
+    <Fragment>
+      <Header />
+      <main>{children}</main>
+    </Fragment>
+  );
+}
 
 export default Layout;
