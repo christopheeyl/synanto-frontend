@@ -17,11 +17,9 @@ const authOptions: NextAuthOptions = {
                     email: string;
                     password: string;
                 };
-
-                if (email !== "john@gmail.com" || password !== "1234") {
+/*                 if (email !== "john@gmail.com" || password !== "1234") {
                     throw new Error('invalid credentials');
-                };
-                
+                }; */
                 return { id: 1, name: 'John', email: 'john@gmail.com' };
             }
         })
