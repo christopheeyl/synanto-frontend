@@ -1,21 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 interface Props {
     //boolean to always open ddm (for presentation)
-    forceOpen?: boolean
-    label?: string
-    withDivider?: boolean
-    icon?: JSX.Element
-    items: DDMItem[]
-    withBackground?: boolean
-}
+    forceOpen?: boolean;
+    label?: string;
+    withDivider?: boolean;
+    icon?: JSX.Element;
+    items: DDMItem[];
+    withBackground?: boolean;
+};
 
 export interface DDMItem {
-    icon?: JSX.Element
-    label: string
-    desc?: string
-    link?: string
-}
+    icon?: JSX.Element;
+    label: string;
+    desc?: string;
+    link?: string;
+};
 
 const DropDownMenu = (props: Props) => {
     const [isOpen, setIsOpen] = useState(false)

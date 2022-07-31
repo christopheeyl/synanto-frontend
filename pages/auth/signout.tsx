@@ -1,9 +1,13 @@
-import React from 'react'
+import { NextPage } from 'next';
+import { signOut } from 'next-auth/react';
+import React, { Fragment } from 'react';
 
-function signout() {
+const SignOut: NextPage = (): JSX.Element  => {
   return (
-    <div>signout</div>
+    <Fragment>
+      <button onClick={() => signOut()}>Sign out</button>
+    </Fragment>
   )
 }
 
-export default signout
+export default SignOut;
