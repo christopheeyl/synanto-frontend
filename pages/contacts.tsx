@@ -9,4 +9,4 @@ function Contacts() {
   );
 }
 
-withPageAuthRequired(Contacts);
+export default withPageAuthRequired(Contacts);
