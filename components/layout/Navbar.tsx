@@ -1,9 +1,59 @@
 import { useState } from 'react';
 
-const navItems = ['Home', 'About', 'Contact', 'Blog', 'Careers'];
+interface Props {
+  isLoggedin: boolean;
+}
 
-export default function Navbar() {
+interface DDMItem {
+  label: string;
+  link?: string;
+}
+
+const navItemsUserLogout: DDMItem[] = [
+  {
+    label: 'Home',
+    link: '',
+  },
+  {
+    label: 'About',
+    link: '',
+  },
+  {
+    label: 'Contact',
+    link: '',
+  },
+  {
+    label: 'Blog',
+    link: '',
+  },
+  {
+    label: 'Careers',
+    link: '',
+  },
+];
+
+const navItemsUserLogin: DDMItem[] = [
+  {
+    label: 'Chat',
+    link: '/chat',
+  },
+  {
+    label: 'Calendar',
+    link: '/calendar',
+  },
+  {
+    label: 'Event',
+    link: '/event',
+  },
+  {
+    label: 'Contacts',
+    link: '/contacts',
+  },
+];
+
+export default function Navbar({ isLoggedin }: Props) {
   const [isOpen, setIsOpen] = useState(false);
+  const navItems = isLoggedin ? navItemsUserLogin : navItemsUserLogout;
   return (
     <>
       <div className="fixed z-50 top-0 w-full bg-white">
@@ -14,8 +64,11 @@ export default function Navbar() {
 
           <div className="hidden lg:block text-sm text-neutral-grayish-blue">
             {navItems.map((navItem) => (
-              <a className="mx-3 py-5 hover:gradient-border-bottom" href="#">
-                {navItem}
+              <a
+                className="mx-3 py-5 hover:gradient-border-bottom"
+                href={navItem.link}
+              >
+                {navItem.label}
               </a>
             ))}
           </div>
@@ -48,9 +101,9 @@ export default function Navbar() {
       bg-opacity-50 ${isOpen ? 'block' : 'hidden'}`}
       >
         <div className="bg-white text-primary-dark-blue flex flex-col text-center mx-5 my-20 py-4 rounded">
-          {navItems.map((navItem) => (
-            <a key={navItem} className="py-2" href="#">
-              {navItem}
+          {navItems.map((navItem, id) => (
+            <a key={id} className="py-2" href="#">
+              {navItem.label}
             </a>
           ))}
         </div>

@@ -1,13 +1,12 @@
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
-import React from 'react';
-import Layout from '../layouts/Layout';
+import Main from '../components/layout/Main';
 
 function Contacts() {
   return (
-    <Layout>
+    <Main isLoggedin={true}>
       <p>Contacts</p>
-    </Layout>
+    </Main>
   );
 }
 
-export default withPageAuthRequired(Contacts);
+withPageAuthRequired(Contacts);

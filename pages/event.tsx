@@ -1,12 +1,11 @@
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
-import React from 'react';
-import Layout from '../layouts/Layout';
+import Main from '../components/layout/Main';
 
 function Event() {
   return (
-    <Layout>
+    <Main isLoggedin={true}>
       <p>Event</p>
-    </Layout>
+    </Main>
   );
 }
 
