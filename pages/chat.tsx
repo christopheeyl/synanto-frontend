@@ -10,4 +10,4 @@ function chat() {
   );
 }
 
-export default chat();
+export default chat;
