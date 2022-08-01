@@ -1,27 +1,27 @@
 const motivationItems = [
   {
     iconPath: '/icons/icon-online.svg',
-    title: 'Online Banking',
+    title: 'Create a new event',
     subtitle:
-      'Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world.',
+      'Organize a new event with a simple form to fill in, submit it.',
   },
   {
     iconPath: '/icons/icon-budgeting.svg',
-    title: 'Simple Budgeting',
+    title: 'Contacts join you',
     subtitle:
-      'See exactly where your money goes each month. Receive notifications when you’re close to hitting your limits.',
+      'An event invitation will be send to your contacts you had submitted in the form.',
   },
   {
     iconPath: '/icons/icon-onboarding.svg',
-    title: 'Fast Onboarding',
+    title: 'Chat',
     subtitle:
-      'We don’t do branches. Open your account in minutes online and start taking control of your finances right away.',
+      'A specific conversation will be created for you and allow you to discuss with your invited contacts',
   },
   {
     iconPath: '/icons/icon-api.svg',
-    title: 'Open API',
+    title: 'Calendar',
     subtitle:
-      'Manage your savings, investments, pension, and much more from one account. Tracking your money has never been easier.',
+      'Find all created events in your personnal calendar.',
   },
 ];
 
@@ -29,15 +29,11 @@ export default function Motivation() {
   return (
     <section className="py-14 bg-neutral-light-grayish-blue lg:py-24">
       <div className="container text-center lg:text-left">
-        <div className="grid lg:grid-cols-2 mb-12 lg:mb-16">
+        <div className="grid lg:grid-cols-2 mb-8 lg:mb-8">
           <div className="col-span-1">
             <h2 className="text-3xl lg:text-4xl text-primary-dark-blue pb-5">
-              Why choose Easybank?
+              How does it work?
             </h2>
-            <p className="text-neutral-grayish-blue text-sm lg:text-base leading-5">
-              We leverage Open Banking to turn your bank account into your
-              financial hub. Control your finances like never before.
-            </p>
           </div>
         </div>
         <div className="grid grid-cols-1 gap-9 lg:gap-6 lg:grid-cols-4">

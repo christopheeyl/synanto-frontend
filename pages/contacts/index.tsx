@@ -1,11 +1,11 @@
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
-import Main from '../components/layout/Main';
+import MainLayout from '../../components/layout/MainLayout';
 
 function Contacts() {
   return (
-    <Main isLoggedin={true}>
+    <MainLayout isLoggedin={true}>
       <p>Contacts</p>
-    </Main>
+    </MainLayout>
   );
 }
 

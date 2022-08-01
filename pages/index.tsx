@@ -1,8 +1,10 @@
 import Head from 'next/head';
 import type { NextPage } from 'next';
-import Navbar from '../components/layout/Navbar';
+import Blog from '../components/home/Blog';
+import Cost from '../components/home/Cost';
 import Hero from '../components/home/Hero';
 import Motivation from '../components/home/Motivation';
+import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 
 const Home: NextPage = () => {
@@ -19,6 +21,8 @@ const Home: NextPage = () => {
         </div>
         <Hero />
         <Motivation />
+        <Cost />
+        <Blog />
       </div>
       <Footer />
     </>

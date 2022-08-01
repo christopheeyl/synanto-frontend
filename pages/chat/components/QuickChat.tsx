@@ -1,4 +1,4 @@
-export default function Chat() {
+function QuickChat() {
   return (
     <div className="flex h-screen antialiased text-gray-800">
       <div className="flex flex-row h-full w-full overflow-x-hidden">
@@ -20,7 +20,7 @@ export default function Chat() {
                 ></path>
               </svg>
             </div>
-            <div className="ml-2 font-bold text-2xl">QuickChat</div>
+            <div className="ml-2 font-bold text-2xl">Chat</div>
           </div>
           <div className="flex flex-col items-center bg-indigo-100 border border-gray-200 mt-4 w-full py-6 px-4 rounded-lg">
             <div className="h-20 w-20 rounded-full border overflow-hidden">
@@ -299,7 +299,7 @@ export default function Chat() {
                 </div>
               </div>
               <div className="ml-4">
-                <button className="flex items-center justify-center bg-indigo-500 hover:bg-indigo-600 rounded-xl text-white px-4 py-1 flex-shrink-0">
+                <button className="flex items-center justify-center bg-primary-lime-green rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green  to-primary-bright-cyan hover:button-brightness focus:outline-none focus:ring ring-green-400 px-4 py-2 flex-shrink-0">
                   <span>Send</span>
                   <span className="ml-2">
                     <svg
@@ -326,3 +326,5 @@ export default function Chat() {
     </div>
   );
 }
+
+export default QuickChat;

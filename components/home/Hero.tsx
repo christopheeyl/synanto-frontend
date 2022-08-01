@@ -7,16 +7,17 @@ export default function Hero() {
       <div className="container h-screen relative z-20">
         <div className="h-full flex flex-col justify-end pb-4 lg:pb-0 lg:w-96 lg:justify-center">
           <div className="h-1/2 flex flex-col justify-center items-center text-center lg:items-start lg:text-left">
-            <h1 className="text-4xl lg:text-5xl text-primary-dark-blue pb-5">
-              Next generation digital banking
+            <h1 className="text-4xl lg:text-4xl text-primary-dark-blue pb-5">
+              Easy scheduling event
             </h1>
             <p className="text-neutral-grayish-blue text-xs lg:text-base leading-5 mb-7">
-              Take your financial life online. Your Easybank account will be a
-              one-stop-shop for spending, saving, budgeting, investing, and much
-              more.
+              Synanto help you to organize personnal events 
+              and allow you to invite contacts with a simple invitation request.
+              Each event will be saved in your personnal calendar, 
+              each event will create a chat and allow your contacts to discuss with you.
             </p>
             <button className="bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness mb-7 focus:outline-none focus:ring ring-green-400">
-              Request Invite
+              Try it out
             </button>
           </div>
         </div>

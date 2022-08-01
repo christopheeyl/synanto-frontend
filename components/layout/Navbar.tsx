@@ -15,19 +15,15 @@ const navItemsUserLogout: DDMItem[] = [
     link: '',
   },
   {
-    label: 'About',
+    label: 'How does it work?',
     link: '',
   },
   {
-    label: 'Contact',
+    label: 'How does it cost?',
     link: '',
   },
   {
-    label: 'Blog',
-    link: '',
-  },
-  {
-    label: 'Careers',
+    label: 'Product',
     link: '',
   },
 ];
@@ -42,8 +38,8 @@ const navItemsUserLogin: DDMItem[] = [
     link: '/calendar',
   },
   {
-    label: 'Event',
-    link: '/event',
+    label: 'Events',
+    link: '/events',
   },
   {
     label: 'Contacts',
@@ -54,9 +50,10 @@ const navItemsUserLogin: DDMItem[] = [
 export default function Navbar({ isLoggedin }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const navItems = isLoggedin ? navItemsUserLogin : navItemsUserLogout;
+  
   return (
     <>
-      <div className="fixed z-50 top-0 w-full bg-white">
+      <div className="sticky z-50 top-0 w-full bg-white">
         <nav className="container flex justify-between items-center z-20">
           <div className="my-5 lg:my-6">
             <img src="/images/logo.svg" alt="easybank logo" />
@@ -74,7 +71,7 @@ export default function Navbar({ isLoggedin }: Props) {
           </div>
 
           <button className="hidden lg:block bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness focus:outline-none focus:ring ring-green-400">
-            Request Invite
+            Login
           </button>
 
           <button

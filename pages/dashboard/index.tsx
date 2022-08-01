@@ -1,11 +1,11 @@
 import React from 'react';
-import Main from '../components/layout/Main';
+import MainLayout from '../../components/layout/MainLayout';
 
 function Dashboard() {
   return (
-    <Main isLoggedin={true}>
+    <MainLayout isLoggedin={true}>
       <p>TEST</p>
-    </Main>
+    </MainLayout>
   );
 }
 
