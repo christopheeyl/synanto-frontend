@@ -11,10 +11,10 @@ export default function Hero() {
               Easy scheduling event
             </h1>
             <p className="text-neutral-grayish-blue text-xs lg:text-base leading-5 mb-7">
-              Synanto help you to organize personnal events 
-              and allow you to invite contacts with a simple invitation request.
-              Each event will be saved in your personnal calendar, 
-              each event will create a chat and allow your contacts to discuss with you.
+              Synanto help you to organize personnal events and allow you to
+              invite contacts with a simple invitation request. Each event will
+              be saved in your personnal calendar, each event will create a chat
+              and allow your contacts to discuss with you.
             </p>
             <button className="bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness mb-7 focus:outline-none focus:ring ring-green-400">
               Try it out

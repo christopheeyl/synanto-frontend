@@ -1,9 +1,8 @@
-import { FunctionComponent, useState } from 'react';
+import { FunctionComponent, useState } from "react";
 
 interface IProps {
   isLoggedin: boolean;
-  logIn?: () => void;
-  logOut?: () => void;
+  logUser?: () => void;
 }
 
 interface DDMItem {
@@ -13,46 +12,46 @@ interface DDMItem {
 
 const navItemsUserLogout: DDMItem[] = [
   {
-    label: 'Home',
-    link: '',
+    label: "Home",
+    link: "",
   },
   {
-    label: 'How does it work?',
-    link: '',
+    label: "How does it work?",
+    link: "",
   },
   {
-    label: 'How does it cost?',
-    link: '',
+    label: "How does it cost?",
+    link: "",
   },
   {
-    label: 'Product',
-    link: '',
+    label: "Product",
+    link: "",
   },
 ];
 
 const navItemsUserLogin: DDMItem[] = [
   {
-    label: 'Chat',
-    link: '/chat',
+    label: "Chat",
+    link: "/chat",
   },
   {
-    label: 'Calendar',
-    link: '/calendar',
+    label: "Calendar",
+    link: "/calendar",
   },
   {
-    label: 'Events',
-    link: '/events',
+    label: "Events",
+    link: "/events",
   },
   {
-    label: 'Contacts',
-    link: '/contacts',
+    label: "Contacts",
+    link: "/contacts",
   },
 ];
 
-const Navbar: FunctionComponent<IProps> = ({ isLoggedin, logIn, logOut }) => {
+const Navbar: FunctionComponent<IProps> = ({ isLoggedin, logUser }) => {
   const [isOpen, setIsOpen] = useState(false);
   const navItems = isLoggedin ? navItemsUserLogin : navItemsUserLogout;
-  
+
   return (
     <>
       <div className="sticky z-50 top-0 w-full bg-white">
@@ -62,9 +61,10 @@ const Navbar: FunctionComponent<IProps> = ({ isLoggedin, logIn, logOut }) => {
           </div>
 
           <div className="hidden lg:block text-sm text-neutral-grayish-blue">
-            {navItems.map((navItem) => (
+            {navItems.map((navItem, id) => (
               <a
                 className="mx-3 py-5 hover:gradient-border-bottom"
+                key={id}
                 href={navItem.link}
               >
                 {navItem.label}
@@ -72,7 +72,10 @@ const Navbar: FunctionComponent<IProps> = ({ isLoggedin, logIn, logOut }) => {
             ))}
           </div>
 
-          <button onClick={isLoggedin ? logIn : logOut} className="hidden lg:block bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness focus:outline-none focus:ring ring-green-400">
+          <button
+            onClick={logUser}
+            className="hidden lg:block bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness focus:outline-none focus:ring ring-green-400"
+          >
             Login
           </button>
 
@@ -81,12 +84,12 @@ const Navbar: FunctionComponent<IProps> = ({ isLoggedin, logIn, logOut }) => {
             className="lg:hidden focus:outline-none"
           >
             <img
-              className={`${isOpen && 'hidden'}`}
+              className={`${isOpen && "hidden"}`}
               src="/icons/icon-hamburger.svg"
               alt=""
             />
             <img
-              className={isOpen ? 'block' : 'hidden'}
+              className={isOpen ? "block" : "hidden"}
               src="/icons/icon-close.svg"
               alt=""
             />
@@ -96,7 +99,9 @@ const Navbar: FunctionComponent<IProps> = ({ isLoggedin, logIn, logOut }) => {
 
       {/* Modal */}
       <div
-        className={`fixed inset-0 z-30 bg-gray-800 bg-opacity-50 ${isOpen ? 'block' : 'hidden'}`}
+        className={`fixed inset-0 z-30 bg-gray-800 bg-opacity-50 ${
+          isOpen ? "block" : "hidden"
+        }`}
       >
         <div className="bg-white text-primary-dark-blue flex flex-col text-center mx-5 my-20 py-4 rounded">
           {navItems.map((navItem, id) => (
@@ -108,6 +113,6 @@ const Navbar: FunctionComponent<IProps> = ({ isLoggedin, logIn, logOut }) => {
       </div>
     </>
   );
-}
+};
 
 export default Navbar;

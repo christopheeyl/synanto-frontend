@@ -1,27 +1,25 @@
 const motivationItems = [
   {
-    iconPath: '/icons/icon-online.svg',
-    title: 'Create a new event',
-    subtitle:
-      'Organize a new event with a simple form to fill in, submit it.',
+    iconPath: "/icons/icon-online.svg",
+    title: "Create a new event",
+    subtitle: "Organize a new event with a simple form to fill in, submit it.",
   },
   {
-    iconPath: '/icons/icon-budgeting.svg',
-    title: 'Contacts join you',
+    iconPath: "/icons/icon-budgeting.svg",
+    title: "Contacts join you",
     subtitle:
-      'An event invitation will be send to your contacts you had submitted in the form.',
+      "An event invitation will be send to your contacts you had submitted in the form.",
   },
   {
-    iconPath: '/icons/icon-onboarding.svg',
-    title: 'Chat',
+    iconPath: "/icons/icon-onboarding.svg",
+    title: "Chat",
     subtitle:
-      'A specific conversation will be created for you and allow you to discuss with your invited contacts',
+      "A specific conversation will be created for you and allow you to discuss with your invited contacts",
   },
   {
-    iconPath: '/icons/icon-api.svg',
-    title: 'Calendar',
-    subtitle:
-      'Find all created events in your personnal calendar.',
+    iconPath: "/icons/icon-api.svg",
+    title: "Calendar",
+    subtitle: "Find all created events in your personnal calendar.",
   },
 ];
 
@@ -37,8 +35,8 @@ export default function Motivation() {
           </div>
         </div>
         <div className="grid grid-cols-1 gap-9 lg:gap-6 lg:grid-cols-4">
-          {motivationItems.map((item) => (
-            <div key={item.title} className="justify-center">
+          {motivationItems.map((item, id) => (
+            <div key={id} className="justify-center">
               <div className="flex justify-center lg:justify-start">
                 <img src={item.iconPath} alt="" />
               </div>

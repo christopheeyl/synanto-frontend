@@ -94,6 +94,6 @@ const Footer: FunctionComponent = () => {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

@@ -11,7 +11,8 @@ export default function Cost() {
         </div>
         <div className="grid place-items-center">
           <p className="text-neutral-grayish-blue text-xs lg:text-base leading-5 mb-7">
-            Synanto is a completely free tool. A simple registration is required.
+            Synanto is a completely free tool. A simple registration is
+            required.
           </p>
         </div>
       </div>
