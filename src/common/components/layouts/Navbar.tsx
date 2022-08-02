@@ -2,7 +2,8 @@ import { FunctionComponent, useState } from 'react';
 
 interface IProps {
   isLoggedin: boolean;
-  logIn: () => void;
+  logIn?: () => void;
+  logOut?: () => void;
 }
 
 interface DDMItem {
@@ -48,7 +49,7 @@ const navItemsUserLogin: DDMItem[] = [
   },
 ];
 
-const Navbar: FunctionComponent<IProps> = ({ isLoggedin, logIn }) => {
+const Navbar: FunctionComponent<IProps> = ({ isLoggedin, logIn, logOut }) => {
   const [isOpen, setIsOpen] = useState(false);
   const navItems = isLoggedin ? navItemsUserLogin : navItemsUserLogout;
   
@@ -71,7 +72,7 @@ const Navbar: FunctionComponent<IProps> = ({ isLoggedin, logIn }) => {
             ))}
           </div>
 
-          <button onClick={logIn} className="hidden lg:block bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness focus:outline-none focus:ring ring-green-400">
+          <button onClick={isLoggedin ? logIn : logOut} className="hidden lg:block bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness focus:outline-none focus:ring ring-green-400">
             Login
           </button>
 
