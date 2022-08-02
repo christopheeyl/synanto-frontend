@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { FunctionComponent, useState } from 'react';
 
-interface Props {
+interface IProps {
   isLoggedin: boolean;
+  logIn: () => void;
 }
 
 interface DDMItem {
@@ -47,7 +48,7 @@ const navItemsUserLogin: DDMItem[] = [
   },
 ];
 
-export default function Navbar({ isLoggedin }: Props) {
+const Navbar: FunctionComponent<IProps> = ({ isLoggedin, logIn }) => {
   const [isOpen, setIsOpen] = useState(false);
   const navItems = isLoggedin ? navItemsUserLogin : navItemsUserLogout;
   
@@ -70,7 +71,7 @@ export default function Navbar({ isLoggedin }: Props) {
             ))}
           </div>
 
-          <button className="hidden lg:block bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness focus:outline-none focus:ring ring-green-400">
+          <button onClick={logIn} className="hidden lg:block bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness focus:outline-none focus:ring ring-green-400">
             Login
           </button>
 
@@ -94,8 +95,7 @@ export default function Navbar({ isLoggedin }: Props) {
 
       {/* Modal */}
       <div
-        className={`fixed inset-0 z-30 bg-gray-800 
-      bg-opacity-50 ${isOpen ? 'block' : 'hidden'}`}
+        className={`fixed inset-0 z-30 bg-gray-800 bg-opacity-50 ${isOpen ? 'block' : 'hidden'}`}
       >
         <div className="bg-white text-primary-dark-blue flex flex-col text-center mx-5 my-20 py-4 rounded">
           {navItems.map((navItem, id) => (
@@ -108,3 +108,5 @@ export default function Navbar({ isLoggedin }: Props) {
     </>
   );
 }
+
+export default Navbar;

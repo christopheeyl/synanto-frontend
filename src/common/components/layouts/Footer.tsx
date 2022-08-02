@@ -1,4 +1,6 @@
-export default function Footer() {
+import { FunctionComponent } from "react";
+
+const Footer: FunctionComponent = () => {
   return (
     <footer className="bg-primary-dark-blue py-10">
       <div className="container">
@@ -93,3 +95,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+export default Footer;

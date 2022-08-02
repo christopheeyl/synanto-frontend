@@ -1,19 +1,15 @@
-import Head from 'next/head';
+import { FunctionComponent, ReactNode } from 'react';
 import Footer from './Footer';
 import Navbar from './Navbar';
 
-interface Props {
-  children: JSX.Element;
+interface IProps {
+  children: ReactNode;
   isLoggedin: boolean;
 }
 
-export default function MainLayout({ children, isLoggedin }: Props) {
+const MainLayout: FunctionComponent<IProps> = ({ children, isLoggedin }) => {
   return (
     <>
-      <Head>
-        <title>Synanto</title>
-        <link rel="icon" href="/favicon-32x32.png" />
-      </Head>
       <Navbar isLoggedin={isLoggedin} />
       <div>
         <div>
@@ -24,3 +20,5 @@ export default function MainLayout({ children, isLoggedin }: Props) {
     </>
   );
 }
+
+export default MainLayout;
