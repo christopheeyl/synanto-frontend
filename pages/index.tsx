@@ -12,6 +12,11 @@ import Router from "next/router";
 
 const Home: NextPage = () => {
   const { isUserLogedIn, route } = log(false);
+  const { user } = useUser();
+
+  useEffect(() => {
+    Router.replace("/dashboard");
+  },[user])
 
   function redirect() {
     Router.replace(route);
